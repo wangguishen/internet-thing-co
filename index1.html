@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+    }
+    .flex{
+      display: flex;
+    }
+    .flex-cell{
+      flex: 0 0 33.33%;
+      height: 50px;
+      padding: 0 calc(10px / 3);
+      box-sizing: border-box;
+    }
+    .flex-cell-content{
+      height: 50px;
+      border: 1px solid red;
+      display: flex;
+      flex-direction: column;
+    }
+    .flex-cell:first-child{
+      padding-left: 0px;
+      padding-right: calc(10px / 3 * 2);
+    }
+    .flex-cell:last-child{
+      padding-left: calc(10px / 3 * 2);
+      padding-right: 0px;
+    }
+  </style>
+</head>
+<body>
+  <div class="flex">
+    <div class="flex-cell">
+      <div class="flex-cell-content">
+        <span>123</span>
+        <span>415</span>
+      </div>
+    </div>
+    <div class="flex-cell">
+      <div class="flex-cell-content">2</div>
+    </div>
+    <div class="flex-cell">
+      <div class="flex-cell-content">3</div>
+    </div>
+  </div>
+</body>
+</html>
